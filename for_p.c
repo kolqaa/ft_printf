@@ -6,7 +6,7 @@
 /*   By: nsimonov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/18 13:37:00 by nsimonov          #+#    #+#             */
-/*   Updated: 2017/02/20 14:48:37 by nsimonov         ###   ########.fr       */
+/*   Updated: 2017/02/20 14:50:31 by nsimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,11 @@ void    work_with_wmP(long long nb, t_mod *mod, char format)
     int flag;
 
     if (mod->precNum > lennum16(nb))
-        tmp = mod->precNum + 2;
+		nb == 0 ? (tmp = mod->precNum + 1) : \
+			(tmp = mod->precNum + 2);
     else
-        tmp = lennum16(nb) + 2;
+		nb == 0 ? (tmp = lennum16(nb) + 1) : \
+			(tmp = lennum16(nb) + 2);
 	my_putstr("0x");
     while (mod->precNum-- > lennum16(nb))
         my_putchar('0');
