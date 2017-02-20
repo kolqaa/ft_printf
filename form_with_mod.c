@@ -6,7 +6,7 @@
 /*   By: nsimonov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/02 16:03:01 by nsimonov          #+#    #+#             */
-/*   Updated: 2017/02/20 14:10:14 by nsimonov         ###   ########.fr       */
+/*   Updated: 2017/02/20 14:11:27 by nsimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int form_with_mod(char format, va_list arg, t_mod *mod)
 	else if (format == 'c' || format == 'C')
 		for_c(format, arg, mod);
 	else if (format == 'n')
-		*(va_arg(arg, unsigned int*)) = r_value;
+		*(va_arg(arg, int*)) = r_value;
 	else if (format == '%')
 		for_prec(format, arg, mod);
 	return (0);

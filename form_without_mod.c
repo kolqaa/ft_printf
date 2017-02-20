@@ -6,7 +6,7 @@
 /*   By: nsimonov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/02 16:02:17 by nsimonov          #+#    #+#             */
-/*   Updated: 2017/02/20 14:09:58 by nsimonov         ###   ########.fr       */
+/*   Updated: 2017/02/20 14:11:41 by nsimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,5 @@ void    form_without_mod(char format, va_list arg)
 	else if (format == 'U')
 		my_formin(va_arg(arg, unsigned long));
 	else if (format == 'n')
-		*(va_arg(arg, unsigned int*)) = r_value;
+		*(va_arg(arg, int*)) = r_value;
 }
