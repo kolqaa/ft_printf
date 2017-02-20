@@ -6,7 +6,7 @@
 /*   By: nsimonov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/02 16:02:17 by nsimonov          #+#    #+#             */
-/*   Updated: 2017/02/19 15:10:11 by nsimonov         ###   ########.fr       */
+/*   Updated: 2017/02/20 14:09:58 by nsimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,10 @@ void    form_without_mod(char format, va_list arg)
 	else if (format == 'X')
 		my_itoa_base((va_arg(arg, unsigned int)), 16, format);
 	else if (format == 'p')
+	{
+		my_putstr("0x");
 		my_itoa_base((va_arg(arg, unsigned long int)), 16, format);
+	}
 	else if (format == 'c' || format == 'C')
 		my_putchar((char)va_arg(arg, int));
 	else if (format == 'n')
@@ -48,4 +51,6 @@ void    form_without_mod(char format, va_list arg)
 		my_formin(va_arg(arg, unsigned int));
 	else if (format == 'U')
 		my_formin(va_arg(arg, unsigned long));
+	else if (format == 'n')
+		*(va_arg(arg, unsigned int*)) = r_value;
 }
