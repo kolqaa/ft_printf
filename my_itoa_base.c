@@ -6,11 +6,10 @@
 /*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/14 10:23:50 by exam              #+#    #+#             */
-/*   Updated: 2017/02/20 14:00:42 by nsimonov         ###   ########.fr       */
+/*   Updated: 2017/02/20 16:07:17 by nsimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "header.h"
 
 char	*ft_strrev(char *array)
