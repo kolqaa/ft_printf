@@ -6,7 +6,7 @@
 /*   By: nsimonov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/30 10:56:25 by nsimonov          #+#    #+#             */
-/*   Updated: 2017/02/20 14:01:14 by nsimonov         ###   ########.fr       */
+/*   Updated: 2017/02/20 16:27:15 by nsimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int ft_printf(const char *format, ...)
 			else
 			{
 				form_without_mod(format[i], arg);
-				free(mod);
+				//free(mod);
 			}
 		}
 		else
