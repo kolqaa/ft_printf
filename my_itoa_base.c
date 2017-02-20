@@ -6,7 +6,7 @@
 /*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/14 10:23:50 by exam              #+#    #+#             */
-/*   Updated: 2017/02/20 16:26:28 by nsimonov         ###   ########.fr       */
+/*   Updated: 2017/02/20 17:07:53 by nsimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,5 +102,5 @@ void	my_itoa_base(long long value, int base, char format)
 	}
 	ft_strrev(array);
 	my_putstr(array);
-	
+	free(array);
 }
