@@ -6,7 +6,7 @@
 /*   By: nsimonov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/18 13:37:00 by nsimonov          #+#    #+#             */
-/*   Updated: 2017/02/20 14:46:03 by nsimonov         ###   ########.fr       */
+/*   Updated: 2017/02/20 14:48:07 by nsimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,11 @@ void    work_with_wmP(long long nb, t_mod *mod, char format)
 void    work_with_elseP(long long nb, t_mod *mod, char format)
 {
     long long tmp;
+	int flag;
 
+	flag = 0;
+	if (nb == 0)
+		flag = 1;
     if (mod->precNum > lennum16(nb))
 		nb == 0 ? (tmp = mod->precNum + 1) : \
 			(tmp = mod->precNum + 2);
@@ -51,7 +55,7 @@ void    work_with_elseP(long long nb, t_mod *mod, char format)
         mod->precNum--;
     }
 	my_putstr("0x");
-	if (nb != 0)
+	if (!flag)
 		my_itoa_base(nb, 16, format);
 }
 
