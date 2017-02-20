@@ -6,7 +6,7 @@
 /*   By: nsimonov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/18 13:37:00 by nsimonov          #+#    #+#             */
-/*   Updated: 2017/02/18 14:36:52 by nsimonov         ###   ########.fr       */
+/*   Updated: 2017/02/20 14:46:03 by nsimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,11 @@ void    work_with_wmP(long long nb, t_mod *mod, char format)
 {
     long long tmp;
     int flag;
+
     if (mod->precNum > lennum16(nb))
-        tmp = mod->precNum;
+        tmp = mod->precNum + 2;
     else
-        tmp = lennum16(nb);
+        tmp = lennum16(nb) + 2;
 	my_putstr("0x");
     while (mod->precNum-- > lennum16(nb))
         my_putchar('0');
@@ -34,9 +35,11 @@ void    work_with_elseP(long long nb, t_mod *mod, char format)
     long long tmp;
 
     if (mod->precNum > lennum16(nb))
-        tmp = mod->precNum;
+		nb == 0 ? (tmp = mod->precNum + 1) : \
+			(tmp = mod->precNum + 2);
     else
-        tmp = lennum16(nb);
+		nb == 0 ? (tmp = lennum16(nb) + 1) :	\
+			(tmp = lennum16(nb) + 2);
     if (mod->okto && nb != 0 && mod->precision != 1)
         tmp = tmp + 2;
 
@@ -46,9 +49,10 @@ void    work_with_elseP(long long nb, t_mod *mod, char format)
     {
         my_putchar('0');
         mod->precNum--;
-    }        
+    }
 	my_putstr("0x");
-    my_itoa_base(nb, 16, format);
+	if (nb != 0)
+		my_itoa_base(nb, 16, format);
 }
 
 void    for_p(char format, va_list arg, t_mod *mod)
