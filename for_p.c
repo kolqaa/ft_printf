@@ -6,7 +6,7 @@
 /*   By: nsimonov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/18 13:37:00 by nsimonov          #+#    #+#             */
-/*   Updated: 2017/02/20 14:48:07 by nsimonov         ###   ########.fr       */
+/*   Updated: 2017/02/20 14:48:37 by nsimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,7 @@ void    work_with_elseP(long long nb, t_mod *mod, char format)
         mod->precNum--;
     }
 	my_putstr("0x");
-	if (!flag)
-		my_itoa_base(nb, 16, format);
+	my_itoa_base(nb, 16, format);
 }
 
 void    for_p(char format, va_list arg, t_mod *mod)
