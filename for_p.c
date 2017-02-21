@@ -6,7 +6,7 @@
 /*   By: nsimonov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/18 13:37:00 by nsimonov          #+#    #+#             */
-/*   Updated: 2017/02/20 15:02:21 by nsimonov         ###   ########.fr       */
+/*   Updated: 2017/02/21 16:31:45 by nsimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,9 @@ void    work_with_elseP(long long nb, t_mod *mod, char format)
     long long tmp;
 	int flag;
 
+	flag = 0;
+	if (nb == NULL)
+		flag = 1;
     if (mod->precNum > lennum16(nb))
 		nb == 0 ? (tmp = mod->precNum + 1) : \
 			(tmp = mod->precNum + 2);
@@ -61,22 +64,7 @@ void    for_p(char format, va_list arg, t_mod *mod)
 {
     long long nb;
 
-    nb = 0;
-	int k;
-    if (mod->hh)
-        nb = (unsigned char)va_arg(arg, int);
-    else if (mod->l || format == 'X')
-        nb = va_arg(arg, unsigned long int);
-    else if (mod->h)
-        nb = (unsigned short int)va_arg(arg, int);
-    else if (mod->ll)
-        nb = va_arg(arg, unsigned long long int);
-    else if (mod->j)
-        nb = (uintmax_t)va_arg(arg, int);
-    else if (mod->z)
-        nb = (size_t)va_arg(arg, int);
-    else
-        nb = va_arg(arg, unsigned long);
+	nb = va_arg(arg, unsigned long);
     if ((mod->width || mod->wildcart) && (mod->min))
         work_with_wmP(nb, mod, format);
     else

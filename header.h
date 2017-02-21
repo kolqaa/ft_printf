@@ -6,7 +6,7 @@
 /*   By: nsimonov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/30 11:34:07 by nsimonov          #+#    #+#             */
-/*   Updated: 2017/02/20 15:02:09 by nsimonov         ###   ########.fr       */
+/*   Updated: 2017/02/21 16:12:50 by nsimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@
 # include <stdlib.h>
 # include <stdarg.h>
 # include <string.h>
-
+# define MAX(a, b) ((a) > (b) ? (a) : (b))
+# define IS_SIGN (mod->plu || mod->space || nb < 0 ? 1 : 0)
 typedef struct s_mod
 {
 	int min;
@@ -42,6 +43,8 @@ typedef struct s_mod
 }			t_mod;
 
 int     r_value;
+t_mod	*struct_help(t_mod *mod);
+void	with_mod_help(const char *format, int *i, va_list arg, t_mod *mod);
 int    ft_printf(const char *format, ...);
 void    form_without_mod(char format, va_list arg);
 int     form_with_mod(char format, va_list arg, t_mod *mod);

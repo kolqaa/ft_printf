@@ -1,31 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   struct_help.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsimonov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/01 19:39:17 by nsimonov          #+#    #+#             */
-/*   Updated: 2017/02/18 10:37:56 by nsimonov         ###   ########.fr       */
+/*   Created: 2017/02/20 18:03:05 by nsimonov          #+#    #+#             */
+/*   Updated: 2017/02/20 18:15:54 by nsimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-void	my_putnbr(long long n)
+t_mod	*struct_help(t_mod *mod)
 {
-	if (n < 0)
-	{
-		my_putchar('-');
-		n = -n;
-	}
-	if (n == -2147483648)
-	{
-		my_putnbr(21474);
-		my_putnbr(83648);
-		return ;
-	}
-	if (n / 10)
-		my_putnbr(n / 10);
-	my_putchar(n % 10 + '0');
+	mod = (t_mod*)malloc(sizeof(*mod));
+	mod = my_bzero(mod);
+	return (mod);
 }

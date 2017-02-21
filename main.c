@@ -6,7 +6,7 @@
 /*   By: nsimonov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/30 13:16:01 by nsimonov          #+#    #+#             */
-/*   Updated: 2017/02/20 16:22:58 by nsimonov         ###   ########.fr       */
+/*   Updated: 2017/02/21 16:29:39 by nsimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,12 @@ int main(void)
 	int r = -52;
 	unsigned int r2 = 31;
 	int r3 = 0;
-	printf("or_prf%d\n",printf("%o", 0000042)); 
-	printf("my_prf%d\n",ft_printf("%o", 0000042));
+	unsigned long int s;
+	char *str3;
+	
+	
+
+	printf("or_prf%d\n",printf("{%zp}", 0)); 
+	printf("my_prf%d\n",ft_printf("{%zp}", 0));
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: nsimonov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/02 16:02:17 by nsimonov          #+#    #+#             */
-/*   Updated: 2017/02/20 14:26:26 by nsimonov         ###   ########.fr       */
+/*   Updated: 2017/02/20 19:59:49 by nsimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void    form_without_mod(char format, va_list arg)
 	else if  (format == 'd' || format == 'i')
 		my_signednbr(va_arg(arg, int));
 	else if (format == 'D')
-		my_signednbr(va_arg(arg, long));
+		my_signednbr(va_arg(arg, long long));
 	else if (format == 'o')
 		my_itoa_base((va_arg(arg, unsigned int)), 8, format);
 	else if (format == 'O')
