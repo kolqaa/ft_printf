@@ -6,16 +6,15 @@
 /*   By: nsimonov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/16 14:27:27 by nsimonov          #+#    #+#             */
-/*   Updated: 2017/02/20 16:16:01 by nsimonov         ###   ########.fr       */
+/*   Updated: 2017/02/22 17:47:46 by nsimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-void    work_with_wmO(unsigned long nb, t_mod *mod, char format)
+void    work_with_wmo(unsigned long nb, t_mod *mod, char format)
 {
     unsigned long tmp;
-    int flag;
 
     if (mod->precNum > lennum8(nb))
         tmp = mod->precNum;
@@ -33,7 +32,7 @@ void    work_with_wmO(unsigned long nb, t_mod *mod, char format)
         my_putchar(' ');
 }
 
-void    work_with_elseO(unsigned long nb, t_mod *mod, char format)
+void    work_with_elseo(unsigned long nb, t_mod *mod, char format)
 {
     unsigned int tmp;
     int flag;
@@ -68,23 +67,26 @@ void    work_with_elseO(unsigned long nb, t_mod *mod, char format)
 void    for_o(char format, va_list arg, t_mod *mod)
 {
     long long nb;
+
     nb = 0;
-    if (mod->hh)
-        nb = (unsigned char)va_arg(arg, int);
-    else if (mod->l || format == 'O')
-        nb = va_arg(arg, unsigned long int);
-    else if (mod->h)
-        nb = (unsigned short int)va_arg(arg, int);
+
+	//printf("h -> %d, hh -> %d\n", mod->h, mod->hh);
+    if (mod->j)
+        nb = (uintmax_t)va_arg(arg, int);
     else if (mod->ll)
         nb = va_arg(arg, unsigned long long int);
-    else if (mod->j)
-        nb = (uintmax_t)va_arg(arg, int);
+    else if (mod->l || format == 'O')
+        nb = va_arg(arg, unsigned long int);
     else if (mod->z)
         nb = (size_t)va_arg(arg, int);
+    else if (mod->hh)
+        nb = (unsigned char)va_arg(arg, int);
+    else if (mod->h)
+        nb = (unsigned short int)va_arg(arg, int);
     else
         nb = va_arg(arg, unsigned int);
     if ((mod->width || mod->wildcart) && (mod->min))
-        work_with_wmO(nb, mod, format);
+        work_with_wmo(nb, mod, format);
     else
-        work_with_elseO(nb, mod, format);
+        work_with_elseo(nb, mod, format);
 }

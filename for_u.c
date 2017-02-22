@@ -6,7 +6,7 @@
 /*   By: nsimonov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/14 18:20:34 by nsimonov          #+#    #+#             */
-/*   Updated: 2017/02/19 17:26:26 by nsimonov         ###   ########.fr       */
+/*   Updated: 2017/02/22 17:50:06 by nsimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,23 @@ void	for_u(char format, va_list arg, t_mod *mod)
 	unsigned long long nb;
 
     nb = 0;
-    if (mod->hh)
+	if (mod->j)
+        nb = (uintmax_t)va_arg(arg, int);
+    else if (mod->ll)
+        nb = va_arg(arg, unsigned long long int);
+    else if (mod->l || format == 'U')
+        nb = va_arg(arg, unsigned long int);
+    else if (mod->z)
+        nb = (size_t)va_arg(arg, int);
+    else if (mod->hh)
+        nb = (unsigned char)va_arg(arg, int);
+    else if (mod->h || format == 'U')
+        nb = (unsigned short int)va_arg(arg, int);
+    else
+        nb = va_arg(arg, unsigned int);
+    if ((mod->width || mod->wildcart) && (mod->min))
+        work_with_wmo(nb, mod, format);
+	/*if (mod->hh)
         nb = (unsigned char)va_arg(arg, int);
     else if (mod->l)
         nb = va_arg(arg, unsigned long long);
@@ -73,7 +89,7 @@ void	for_u(char format, va_list arg, t_mod *mod)
     else if (mod->z)
         nb = (size_t)va_arg(arg, int);
     else
-        nb = va_arg(arg, unsigned int);
+	nb = va_arg(arg, unsigned int);*/
 	if ((mod->width || mod->wildcart) && (mod->min))
 		work_with_wmU(nb, mod);
 	else

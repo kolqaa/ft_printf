@@ -6,7 +6,7 @@
 /*   By: nsimonov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/30 11:34:07 by nsimonov          #+#    #+#             */
-/*   Updated: 2017/02/21 16:12:50 by nsimonov         ###   ########.fr       */
+/*   Updated: 2017/02/22 16:58:52 by nsimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,17 +43,18 @@ typedef struct s_mod
 }			t_mod;
 
 int     r_value;
+void	for_nonvalid(char format, va_list arg, t_mod *mod);
+void	helpd(long long nb, t_mod *mod);
 t_mod	*struct_help(t_mod *mod);
 void	with_mod_help(const char *format, int *i, va_list arg, t_mod *mod);
 int    ft_printf(const char *format, ...);
 void    form_without_mod(char format, va_list arg);
 int     form_with_mod(char format, va_list arg, t_mod *mod);
-int		fill_struct(const char *fromat, t_mod *mod, va_list arg);
-int		if_specif(char format);
+int		fill_struct(const char *format, t_mod *mod, va_list arg);
 int		ft_flag(const char *format, int *i, t_mod *mod, va_list arg);
 int		ft_width(const char *format, int *i, t_mod *mod);
 int		ft_precision(const char *format, int *i, t_mod *mod);
-int		ft_lentgh(const char *fromat, int *i, t_mod * mod);
+int		ft_lentgh(const char *format, int *i, t_mod * mod);
 t_mod	*my_bzero(t_mod *mod);
 int		is_modif(char format);
 int		is_flag(char format);
@@ -71,7 +72,7 @@ int		lennum16(long long nbr);
 int		ft_isdigit(int c);
 int 	ft_atoi(const char *str);
 void	my_putnbr(int n);
-void	for_x(char fromat, va_list arg, t_mod *mod);
+void	for_x(char format, va_list arg, t_mod *mod);
 void	for_p(char format, va_list arg, t_mod *mod);
 void	for_s(char format, va_list arg, t_mod *mod);
 int		my_strlen(char *str);

@@ -6,64 +6,71 @@
 /*   By: nsimonov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/06 14:00:01 by nsimonov          #+#    #+#             */
-/*   Updated: 2017/02/21 16:25:54 by nsimonov         ###   ########.fr       */
+/*   Updated: 2017/02/22 15:41:37 by nsimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
+void	print_if(int flag, long long nb, long long tmp, t_mod *mod)
+{
+	if (!flag)
+        my_formin(nb);
+    while (mod->width-- > tmp)
+        my_putchar(' ');
+}
+
+void	print_sign(long long nb, t_mod *mod)
+{
+	if (nb < 0)
+        my_putchar('-');
+    else if (nb >= 0  && (mod->plu || mod->space))
+        my_putchar(mod->plu ? '+' : ' ');
+}
+
 void	work_with_wm(long long nb, t_mod *mod)
 {
-	long long tmp;
-	int flag;
+	long long	tmp;
+	int			flag;
 
 	if (mod->width < 0)
 		mod->width *= -1;
 	flag = 0;
 	if (mod->precNum > lennum(nb))
 		tmp = mod->precNum;
-	else 
+	else
 		tmp = lennum(nb);
 	if (mod->precNum == 0 && nb == 0 && mod->precision)
-    {
+	{
 		flag = 1;
-        tmp = 0;
-    }
+		tmp = 0;
+	}
 	if (mod->plu || mod->space || nb < 0)
 		tmp++;
 	if (nb < 0)
-        my_putchar('-');
+		my_putchar('-');
 	else if (mod->plu || mod->space)
-        mod->plu ? my_putchar('+') : my_putchar(' ');
+		mod->plu ? my_putchar('+') : my_putchar(' ');
 	while (mod->precNum-- > lennum(nb))
 		my_putchar('0');
-	if (!flag)
-		my_formin(nb);
-	while (mod->width-- > tmp)
-		my_putchar(' ');
+	print_if(flag, nb, tmp, mod);
 }
 
 void	work_with_else(long long nb, t_mod *mod)
-{	
-	int tmp;
+{
 	if (mod->precNum < 0)
 	{
 		mod->precNum = 0;
 		mod->precision = 0;
 	}
-	tmp = mod->width;
 	if (mod->precision)
 		mod->zero = 0;
-
 	while (mod->width - IS_SIGN > MAX(lennum(nb), mod->precNum) && !mod->zero)
 	{
 		my_putchar(' ');
 		mod->width--;
 	}
-	if (nb < 0)
-		my_putchar('-');
-	else if (nb >= 0  && (mod->plu || mod->space))
-		my_putchar(mod->plu ? '+' : ' ');
+	print_sign(nb, mod);
 	while ((mod->width - IS_SIGN) > lennum(nb) && mod->zero)
 	{
 		my_putchar('0');
@@ -74,18 +81,14 @@ void	work_with_else(long long nb, t_mod *mod)
 		my_putchar('0');
 		mod->precNum--;
 	}
-	if (nb != 0 || (nb == 0 && ((mod->precNum != 0 && mod->precision) || !mod->precision)))
-		my_formin(nb);	
-	else if (mod->width)
-		my_putchar(' ');
-		
+	helpd(nb, mod);
 }
 
 void	for_d(char format, va_list arg, t_mod *mod)
 {
 	long long  nb;
-	nb = 0;
 
+	nb = 0;
 	if (mod->hh)
 		nb = (signed char)va_arg(arg, int);
 	else if (mod->l || format == 'D')
@@ -98,7 +101,7 @@ void	for_d(char format, va_list arg, t_mod *mod)
 		nb = (intmax_t)va_arg(arg, intmax_t);
 	else if (mod->z)
 		nb = (size_t)va_arg(arg, size_t);
-	else  
+	else
 		nb = va_arg(arg, int);
 	if ((mod->width || mod->wildcart) && (mod->min || mod->width < 0))
 		work_with_wm(nb, mod);
