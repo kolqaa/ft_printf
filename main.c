@@ -6,7 +6,7 @@
 /*   By: nsimonov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/30 13:16:01 by nsimonov          #+#    #+#             */
-/*   Updated: 2017/02/22 19:18:46 by nsimonov         ###   ########.fr       */
+/*   Updated: 2017/02/22 19:30:56 by nsimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int main(void)
 	unsigned long int s;
 	char *str3;
 
-	printf("or_prf%d\n",printf("%#.3o", 1));
-	printf("my_prf%d\n",ft_printf("%#.3o", 1));
+	printf("or_prf%d\n",printf("%ju", 4999999999));
+	printf("my_prf%d\n",ft_printf("%ju", 4999999999));
 	return (0);
 }

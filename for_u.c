@@ -6,7 +6,7 @@
 /*   By: nsimonov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/14 18:20:34 by nsimonov          #+#    #+#             */
-/*   Updated: 2017/02/22 18:08:58 by nsimonov         ###   ########.fr       */
+/*   Updated: 2017/02/22 19:36:49 by nsimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void    work_with_elseu(unsigned long long nb, t_mod *mod)
 {
     unsigned long long tmp;
 	int flag;
+	char c;
 
 	flag = 0;
 	if (mod->precNum == 0 && nb == 0 && mod->precision)
@@ -59,7 +60,7 @@ void	for_u(char format, va_list arg, t_mod *mod)
 
     nb = 0;
 	if (mod->j)
-        nb = (uintmax_t)va_arg(arg, int);
+        nb = (uintmax_t)va_arg(arg, uintmax_t);
     else if (mod->ll)
         nb = va_arg(arg, unsigned long long int);
     else if (mod->l || format == 'U')
