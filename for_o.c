@@ -6,7 +6,7 @@
 /*   By: nsimonov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/16 14:27:27 by nsimonov          #+#    #+#             */
-/*   Updated: 2017/02/22 17:47:46 by nsimonov         ###   ########.fr       */
+/*   Updated: 2017/02/22 19:24:44 by nsimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void    work_with_elseo(unsigned long nb, t_mod *mod, char format)
     }
     if ((!flag) || (mod->okto && mod->precision))
 	{
-		if (mod->okto && nb != 0) 
+		if (mod->okto && nb != 0 && mod->precNum == 0) 
 			my_putchar('0');
         my_itoa_base(nb, 8, format);
 	}

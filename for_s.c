@@ -6,7 +6,7 @@
 /*   By: nsimonov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/18 14:58:33 by nsimonov          #+#    #+#             */
-/*   Updated: 2017/02/20 14:17:25 by nsimonov         ###   ########.fr       */
+/*   Updated: 2017/02/22 19:05:34 by nsimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@ void    work_with_wmS(char *nb, t_mod *mod)
     int i;
 
     i = 0;
+	if (mod->precNum < 0)
+		mod->precNum *= -1;
+	if (mod->width < 0)
+        mod->width *= -1;
     if (mod->precNum < my_strlen(nb) && mod->precision)
         tmp = mod->precNum;
     else
@@ -36,6 +40,10 @@ void    work_with_elseS(char *nb, t_mod *mod)
 	int i;
 	
 	i = 0;
+	if (mod->precNum < 0)
+		mod->precNum *= -1;
+    if (mod->width < 0)
+        mod->width *= -1;
     if (mod->precNum < my_strlen(nb) && mod->precision)
         tmp = mod->precNum;
     else

@@ -6,13 +6,13 @@
 /*   By: nsimonov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/14 18:20:34 by nsimonov          #+#    #+#             */
-/*   Updated: 2017/02/22 17:50:06 by nsimonov         ###   ########.fr       */
+/*   Updated: 2017/02/22 18:08:58 by nsimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-void    work_with_wmU(unsigned long long nb, t_mod *mod)
+void    work_with_wmu(unsigned long long nb, t_mod *mod)
 {
 	unsigned long long tmp;
 
@@ -27,7 +27,7 @@ void    work_with_wmU(unsigned long long nb, t_mod *mod)
 		my_putchar(' ');
 }
 
-void    work_with_elseU(unsigned long long nb, t_mod *mod)
+void    work_with_elseu(unsigned long long nb, t_mod *mod)
 {
     unsigned long long tmp;
 	int flag;
@@ -72,8 +72,6 @@ void	for_u(char format, va_list arg, t_mod *mod)
         nb = (unsigned short int)va_arg(arg, int);
     else
         nb = va_arg(arg, unsigned int);
-    if ((mod->width || mod->wildcart) && (mod->min))
-        work_with_wmo(nb, mod, format);
 	/*if (mod->hh)
         nb = (unsigned char)va_arg(arg, int);
     else if (mod->l)
@@ -91,7 +89,7 @@ void	for_u(char format, va_list arg, t_mod *mod)
     else
 	nb = va_arg(arg, unsigned int);*/
 	if ((mod->width || mod->wildcart) && (mod->min))
-		work_with_wmU(nb, mod);
+		work_with_wmu(nb, mod);
 	else
-		work_with_elseU(nb, mod);
+		work_with_elseu(nb, mod);
 }

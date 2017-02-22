@@ -6,7 +6,7 @@
 /*   By: nsimonov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/18 19:01:17 by nsimonov          #+#    #+#             */
-/*   Updated: 2017/02/22 16:42:04 by nsimonov         ###   ########.fr       */
+/*   Updated: 2017/02/22 19:06:08 by nsimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 
 void	work_with_wmc(char nb, t_mod *mod)
 {
-	if (mod->width < 0)
-		mod->width *= -1;
+	if (mod->precNum < 0)
+        mod->precNum *= -1;
+    if (mod->width < 0)
+        mod->width *= -1;
 	my_putchar(nb);
 	while ((mod->width - 1) > 0)
 	{
@@ -26,8 +28,10 @@ void	work_with_wmc(char nb, t_mod *mod)
 
 void	work_with_elsec(char nb, t_mod *mod)
 {
-	if (mod->width < 0)
-		mod->width *= -1;
+	if (mod->precNum < 0)
+        mod->precNum *= -1;
+    if (mod->width < 0)
+        mod->width *= -1;
 	while ((mod->width - 1) > 0)
 	{
 		mod->zero ? my_putchar('0') : my_putchar(' ');

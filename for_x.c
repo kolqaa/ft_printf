@@ -6,7 +6,7 @@
 /*   By: nsimonov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/16 18:30:51 by nsimonov          #+#    #+#             */
-/*   Updated: 2017/02/19 14:22:48 by nsimonov         ###   ########.fr       */
+/*   Updated: 2017/02/22 19:18:04 by nsimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ void    work_with_elseX(long long nb, t_mod *mod, char format)
 		my_putstr((format == 'X' ? "0X" : "0x"));
     while (mod->width-- > tmp)
 		mod->zero ? my_putchar('0') : my_putchar(' ');
+	if (mod->okto && !mod->zero && nb != 0)
+        my_putstr((format == 'X' ? "0X" : "0x"));
     while ((mod->precNum - lennum16(nb)) > 0)
     {
         my_putchar('0');
@@ -62,8 +64,8 @@ void    work_with_elseX(long long nb, t_mod *mod, char format)
 	//flag = 0;
 	//else if (mod->okto && mod->width == 0 && mod->precision == 0)
 	//flag = 0;
-    if (mod->okto && !mod->zero && nb != 0)
-		my_putstr((format == 'X' ? "0X" : "0x"));
+    //if (mod->okto && !mod->zero && nb != 0)
+	//my_putstr((format == 'X' ? "0X" : "0x"));
     if (!flag)
         my_itoa_base(nb, 16, format);
 }

@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   printd.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsimonov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/30 13:16:01 by nsimonov          #+#    #+#             */
-/*   Updated: 2017/02/22 19:18:46 by nsimonov         ###   ########.fr       */
+/*   Created: 2017/02/22 18:47:35 by nsimonov          #+#    #+#             */
+/*   Updated: 2017/02/22 18:51:18 by nsimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "header.h"
-#include <limits.h>
 
-int main(void)
+void	printd(long long nbr)
 {
-	char *str = "whatif";
-	char *str2 = "YOHOOOOEU";
-	int r = -52;
-	unsigned int r2 = 31;
-	int r3 = 0;
-	unsigned long int s;
-	char *str3;
+	unsigned long long nbrr;
 
-	printf("or_prf%d\n",printf("%#.3o", 1));
-	printf("my_prf%d\n",ft_printf("%#.3o", 1));
-	return (0);
+    if (nbr < 0)
+    {
+        my_putchar('-');
+        nbrr = -nbr;
+    }
+	else 
+		nbrr = nbr;
+    if (nbrr / 10)
+        printd(nbrr / 10);
+    my_putchar(nbrr % 10 + '0');
 }
+

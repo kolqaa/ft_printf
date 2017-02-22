@@ -6,7 +6,7 @@
 /*   By: nsimonov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/06 14:00:01 by nsimonov          #+#    #+#             */
-/*   Updated: 2017/02/22 15:41:37 by nsimonov         ###   ########.fr       */
+/*   Updated: 2017/02/22 18:43:42 by nsimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,18 +89,19 @@ void	for_d(char format, va_list arg, t_mod *mod)
 	long long  nb;
 
 	nb = 0;
-	if (mod->hh)
-		nb = (signed char)va_arg(arg, int);
-	else if (mod->l || format == 'D')
-		nb = va_arg(arg, long);
-	else if (mod->h)
-		nb = (short)va_arg(arg, int);
-	else if (mod->ll)
+	//printf("mod->h = %d, mod->hh %d\n", mod->h, mod->hh);
+	if (mod->ll)
 		nb = va_arg(arg, long long);
 	else if (mod->j)
 		nb = (intmax_t)va_arg(arg, intmax_t);
 	else if (mod->z)
 		nb = (size_t)va_arg(arg, size_t);
+	else if (mod->l || format == 'D')
+		nb = va_arg(arg, long);
+	else if (mod->hh)
+		nb = (char)va_arg(arg, int);
+	else if (mod->h)
+		nb = (short)va_arg(arg, int);
 	else
 		nb = va_arg(arg, int);
 	if ((mod->width || mod->wildcart) && (mod->min || mod->width < 0))

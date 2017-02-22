@@ -6,7 +6,7 @@
 /*   By: nsimonov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/02 16:02:17 by nsimonov          #+#    #+#             */
-/*   Updated: 2017/02/20 19:59:49 by nsimonov         ###   ########.fr       */
+/*   Updated: 2017/02/22 19:10:47 by nsimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void    form_without_mod(char format, va_list arg)
 	else if  (format == 'd' || format == 'i')
 		my_signednbr(va_arg(arg, int));
 	else if (format == 'D')
-		my_signednbr(va_arg(arg, long long));
+		printd(va_arg(arg,  long long));
 	else if (format == 'o')
 		my_itoa_base((va_arg(arg, unsigned int)), 8, format);
 	else if (format == 'O')
@@ -50,7 +50,7 @@ void    form_without_mod(char format, va_list arg)
 	else if (format == 'u')
 		my_formin(va_arg(arg, unsigned int));
 	else if (format == 'U')
-		my_formin(va_arg(arg, unsigned long));
+		my_itoa_base((va_arg(arg, unsigned long)), 10, format);
 	else if (format == 'n')
 		*(va_arg(arg, unsigned int*)) = r_value;
 }

@@ -6,7 +6,7 @@
 /*   By: nsimonov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/30 11:34:07 by nsimonov          #+#    #+#             */
-/*   Updated: 2017/02/22 16:58:52 by nsimonov         ###   ########.fr       */
+/*   Updated: 2017/02/22 18:48:59 by nsimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ typedef struct s_mod
 }			t_mod;
 
 int     r_value;
+void	printd(long long nbr);
+int 	if_specif(char format);
 void	for_nonvalid(char format, va_list arg, t_mod *mod);
 void	helpd(long long nb, t_mod *mod);
 t_mod	*struct_help(t_mod *mod);

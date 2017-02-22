@@ -6,7 +6,7 @@
 #    By: nsimonov <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/02/18 10:09:09 by nsimonov          #+#    #+#              #
-#    Updated: 2017/02/22 15:48:42 by nsimonov         ###   ########.fr        #
+#    Updated: 2017/02/22 18:49:12 by nsimonov         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -17,7 +17,9 @@ CFLAGS = -Wall -Wextra -Werror
 SRC =  my_bzero.c \
 		fill_struct.c \
 		for_nonvalid.c \
+		printd.c \
 		helpd.c \
+		ft_specif.c \
 		for_prec.c \
 		struct_help.c \
 		with_mod_help.c \
