@@ -8,204 +8,209 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/nfs/2016/n/nsimonov/Projects copy/ft_printf/cmake-build-debug"/>
+				<Option working_dir="/Users/NickS/CLionProjects/ft_printf/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nsimonov/Projects\ copy/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nsimonov/Projects\ copy/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nsimonov/Projects\ copy/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nsimonov/Projects\ copy/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/NickS/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/NickS/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/NickS/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/NickS/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/nfs/2016/n/nsimonov/Projects copy/ft_printf/cmake-build-debug"/>
+				<Option working_dir="/Users/NickS/CLionProjects/ft_printf/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nsimonov/Projects\ copy/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nsimonov/Projects\ copy/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nsimonov/Projects\ copy/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nsimonov/Projects\ copy/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/NickS/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/NickS/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/NickS/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/NickS/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/nfs/2016/n/nsimonov/Projects copy/ft_printf/cmake-build-debug"/>
+				<Option working_dir="/Users/NickS/CLionProjects/ft_printf/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nsimonov/Projects\ copy/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nsimonov/Projects\ copy/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nsimonov/Projects\ copy/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nsimonov/Projects\ copy/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/NickS/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/NickS/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/NickS/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/NickS/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ft_printf">
-				<Option output="/nfs/2016/n/nsimonov/Projects copy/ft_printf/cmake-build-debug/ft_printf" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/nfs/2016/n/nsimonov/Projects copy/ft_printf/cmake-build-debug"/>
+				<Option output="/Users/NickS/CLionProjects/ft_printf/cmake-build-debug/ft_printf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/NickS/CLionProjects/ft_printf/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nsimonov/Projects\ copy/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 ft_printf"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nsimonov/Projects\ copy/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nsimonov/Projects\ copy/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nsimonov/Projects\ copy/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/NickS/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 ft_printf"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/NickS/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/NickS/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/NickS/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ft_printf/fast">
-				<Option output="/nfs/2016/n/nsimonov/Projects copy/ft_printf/cmake-build-debug/ft_printf" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/nfs/2016/n/nsimonov/Projects copy/ft_printf/cmake-build-debug"/>
+				<Option output="/Users/NickS/CLionProjects/ft_printf/cmake-build-debug/ft_printf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/NickS/CLionProjects/ft_printf/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nsimonov/Projects\ copy/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 ft_printf/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nsimonov/Projects\ copy/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nsimonov/Projects\ copy/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nsimonov/Projects\ copy/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/NickS/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 ft_printf/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/NickS/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/NickS/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/NickS/CLionProjects/ft_printf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/Makefile">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/Makefile">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/author">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/author">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/fill_struct.c">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/fill_struct.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/for_c.c">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/for_c.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/for_d.c">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/for_d.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/for_o.c">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/for_nonvalid.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/for_p.c">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/for_o.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/for_prec.c">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/for_p.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/for_s.c">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/for_prec.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/for_u.c">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/for_s.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/for_x.c">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/for_u.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/form_with_mod.c">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/for_x.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/form_without_mod.c">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/form_with_mod.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/ft_atoi.c">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/form_without_mod.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/ft_flag.c">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/ft_atoi.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/ft_isdigit.c">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/ft_flag.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/ft_lentgh.c">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/ft_isdigit.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/ft_precision.c">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/ft_lentgh.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/ft_printf.c">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/ft_precision.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/ft_specif.c">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/ft_printf.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/ft_width.c">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/ft_specif.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/header.h">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/ft_width.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/is_flag.c">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/header.h">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/is_mod.c">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/helpd.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/is_modif.c">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/is_flag.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/lennum.c">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/is_mod.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/lennum16.c">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/is_modif.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/lennum8.c">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/lennum.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/main.c">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/lennum16.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/my_bzero.c">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/lennum8.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/my_formin.c">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/main.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/my_forun.c">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/my_bzero.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/my_itoa_base.c">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/my_formin.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/my_putchar.c">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/my_forun.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/my_putnbr.c">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/my_itoa_base.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/my_putstr.c">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/my_putchar.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/my_signednbr.c">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/my_putnbr.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/my_strlen.c">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/my_putstr.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/struct_help.c">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/my_signednbr.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/test.c">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/my_strlen.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/with_mod_help.c">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/printd.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/nfs/2016/n/nsimonov/Projects copy/ft_printf/CMakeLists.txt">
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/struct_help.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/test.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/with_mod_help.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/NickS/CLionProjects/ft_printf/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/nfs/2016/n/nsimonov/Projects copy/ft_printf"
+CMAKE_SOURCE_DIR = /Users/NickS/CLionProjects/ft_printf
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/nfs/2016/n/nsimonov/Projects copy/ft_printf/cmake-build-debug"
+CMAKE_BINARY_DIR = /Users/NickS/CLionProjects/ft_printf/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/nfs/2016/n/nsimonov/Projects copy/ft_printf/cmake-build-debug/CMakeFiles" "/nfs/2016/n/nsimonov/Projects copy/ft_printf/cmake-build-debug/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/NickS/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles /Users/NickS/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/nfs/2016/n/nsimonov/Projects copy/ft_printf/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/NickS/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -203,6 +203,33 @@ for_d.s: for_d.c.s
 for_d.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/for_d.c.s
 .PHONY : for_d.c.s
+
+for_nonvalid.o: for_nonvalid.c.o
+
+.PHONY : for_nonvalid.o
+
+# target to build an object file
+for_nonvalid.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/for_nonvalid.c.o
+.PHONY : for_nonvalid.c.o
+
+for_nonvalid.i: for_nonvalid.c.i
+
+.PHONY : for_nonvalid.i
+
+# target to preprocess a source file
+for_nonvalid.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/for_nonvalid.c.i
+.PHONY : for_nonvalid.c.i
+
+for_nonvalid.s: for_nonvalid.c.s
+
+.PHONY : for_nonvalid.s
+
+# target to generate assembly for a file
+for_nonvalid.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/for_nonvalid.c.s
+.PHONY : for_nonvalid.c.s
 
 for_o.o: for_o.c.o
 
@@ -636,6 +663,33 @@ ft_width.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_width.c.s
 .PHONY : ft_width.c.s
 
+helpd.o: helpd.c.o
+
+.PHONY : helpd.o
+
+# target to build an object file
+helpd.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/helpd.c.o
+.PHONY : helpd.c.o
+
+helpd.i: helpd.c.i
+
+.PHONY : helpd.i
+
+# target to preprocess a source file
+helpd.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/helpd.c.i
+.PHONY : helpd.c.i
+
+helpd.s: helpd.c.s
+
+.PHONY : helpd.s
+
+# target to generate assembly for a file
+helpd.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/helpd.c.s
+.PHONY : helpd.c.s
+
 is_flag.o: is_flag.c.o
 
 .PHONY : is_flag.o
@@ -1068,6 +1122,33 @@ my_strlen.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/my_strlen.c.s
 .PHONY : my_strlen.c.s
 
+printd.o: printd.c.o
+
+.PHONY : printd.o
+
+# target to build an object file
+printd.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/printd.c.o
+.PHONY : printd.c.o
+
+printd.i: printd.c.i
+
+.PHONY : printd.i
+
+# target to preprocess a source file
+printd.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/printd.c.i
+.PHONY : printd.c.i
+
+printd.s: printd.c.s
+
+.PHONY : printd.s
+
+# target to generate assembly for a file
+printd.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/printd.c.s
+.PHONY : printd.c.s
+
 struct_help.o: struct_help.c.o
 
 .PHONY : struct_help.o
@@ -1167,6 +1248,9 @@ help:
 	@echo "... for_d.o"
 	@echo "... for_d.i"
 	@echo "... for_d.s"
+	@echo "... for_nonvalid.o"
+	@echo "... for_nonvalid.i"
+	@echo "... for_nonvalid.s"
 	@echo "... for_o.o"
 	@echo "... for_o.i"
 	@echo "... for_o.s"
@@ -1215,6 +1299,9 @@ help:
 	@echo "... ft_width.o"
 	@echo "... ft_width.i"
 	@echo "... ft_width.s"
+	@echo "... helpd.o"
+	@echo "... helpd.i"
+	@echo "... helpd.s"
 	@echo "... is_flag.o"
 	@echo "... is_flag.i"
 	@echo "... is_flag.s"
@@ -1263,6 +1350,9 @@ help:
 	@echo "... my_strlen.o"
 	@echo "... my_strlen.i"
 	@echo "... my_strlen.s"
+	@echo "... printd.o"
+	@echo "... printd.i"
+	@echo "... printd.s"
 	@echo "... struct_help.o"
 	@echo "... struct_help.i"
 	@echo "... struct_help.s"
