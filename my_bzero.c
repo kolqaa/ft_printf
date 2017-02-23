@@ -23,7 +23,6 @@ t_mod *my_bzero(t_mod *mod)
     mod->precision = 0;
     mod->precNum = 0;
     mod->wildcart = 0;
-    mod->x = 0;
     mod->flag = 0;
     mod->hh = 0;
     mod->h = 0;

@@ -31,8 +31,6 @@ typedef struct s_mod
 	int precision;
 	int precNum;
 	int wildcart;
-	int x;
-	int X;
 	int flag;
 	int hh;
 	int h;
@@ -44,8 +42,7 @@ typedef struct s_mod
 
 int     r_value;
 void	printd(long long nbr);
-int 	if_specif(char format);
-void	for_nonvalid(char format, va_list arg, t_mod *mod);
+void for_nonvalid(char format, t_mod *mod);
 void	helpd(long long nb, t_mod *mod);
 t_mod	*struct_help(t_mod *mod);
 void	with_mod_help(const char *format, int *i, va_list arg, t_mod *mod);
@@ -76,10 +73,10 @@ int 	ft_atoi(const char *str);
 void	my_putnbr(int n);
 void	for_x(char format, va_list arg, t_mod *mod);
 void	for_p(char format, va_list arg, t_mod *mod);
-void	for_s(char format, va_list arg, t_mod *mod);
+void for_s(va_list arg, t_mod *mod);
 int		my_strlen(char *str);
-void	for_c(char format, va_list arg, t_mod *mod);
-void	for_prec(char format, va_list arg, t_mod *mod);
+void    for_c(va_list arg, t_mod *mod);
+void for_prec(t_mod *mod);
 void	my_forun(long long nbr);
 
 #endif

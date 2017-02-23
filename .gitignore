@@ -1,0 +1,12 @@
+# Ignore trash and save only source files with Makefile
+*.[ao]
+#*#
+._author
+*~
+._header.h.gch
+._ft_specif.c
+.DS_Store
+._.DS_Store
+/.idea/
+*.txt
+/cmake-build-debug

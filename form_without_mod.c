@@ -12,6 +12,27 @@
 
 #include "header.h"
 
+void    countin_check(char format, va_list arg)
+{
+	if (format == 'p')
+    {
+	    my_putstr("0x");
+	    my_itoa_base((va_arg(arg, unsigned long int)), 16, format);
+    }
+	else if (format == 'c' || format == 'C')
+		my_putchar((char)va_arg(arg, int));
+	else if (format == 'n')
+		*(va_arg(arg, unsigned int*)) = r_value;
+	else if (format == '%')
+		my_putchar(format);
+	else if (format == 'u')
+		my_formin(va_arg(arg, unsigned int));
+	else if (format == 'U')
+		my_itoa_base((va_arg(arg, unsigned long)), 10, format);
+    else if (format != '\0')
+	    my_putchar(format);
+}
+
 void    form_without_mod(char format, va_list arg)
 {
 	char *check;
@@ -36,21 +57,6 @@ void    form_without_mod(char format, va_list arg)
 		my_itoa_base((va_arg(arg, unsigned int)), 16, format);
 	else if (format == 'X')
 		my_itoa_base((va_arg(arg, unsigned int)), 16, format);
-	else if (format == 'p')
-	{
-		my_putstr("0x");
-		my_itoa_base((va_arg(arg, unsigned long int)), 16, format);
-	}
-	else if (format == 'c' || format == 'C')
-		my_putchar((char)va_arg(arg, int));
-	else if (format == 'n')
-		*(va_arg(arg, unsigned int*)) = r_value;
-	else if (format == '%')
-		my_putchar(format);
-	else if (format == 'u')
-		my_formin(va_arg(arg, unsigned int));
-	else if (format == 'U')
-		my_itoa_base((va_arg(arg, unsigned long)), 10, format);
-	else if (format == 'n')
-		*(va_arg(arg, unsigned int*)) = r_value;
+	else
+		countin_check(format, arg);
 }

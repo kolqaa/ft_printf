@@ -19,7 +19,6 @@ SRC =  my_bzero.c \
 		for_nonvalid.c \
 		printd.c \
 		helpd.c \
-		ft_specif.c \
 		for_prec.c \
 		struct_help.c \
 		with_mod_help.c \

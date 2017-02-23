@@ -32,7 +32,7 @@ void    work_with_elsen(char nb, t_mod *mod)
     my_putchar(nb);
 }
 
-void    for_nonvalid(char format, va_list arg, t_mod *mod)
+void for_nonvalid(char format, t_mod *mod)
 {
     char nb;
 

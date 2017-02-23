@@ -24,7 +24,7 @@ int main(void)
 	unsigned long int s;
 	char *str3;
 
-	printf("or_prf%d\n",printf("%ju", 4999999999));
-	printf("my_prf%d\n",ft_printf("%ju", 4999999999));
+	printf("or_prf%d\n",printf("{% S}", "(null)"));
+	printf("my_prf%d\n",ft_printf("{% S}", "(null)"));
 	return (0);
 }

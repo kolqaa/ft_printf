@@ -12,6 +12,16 @@
 
 #include "header.h"
 
+void printifneed(int flag, t_mod *mod, unsigned long long nb, char format)
+{
+    if ((!flag) || (mod->okto && mod->precision))
+	{
+		if (mod->okto && nb != 0 && mod->precNum == 0)
+			my_putchar('0');
+        my_itoa_base(nb, 8, format);
+	}
+}
+
 void    work_with_wmo(unsigned long nb, t_mod *mod, char format)
 {
     unsigned long tmp;
@@ -56,21 +66,15 @@ void    work_with_elseo(unsigned long nb, t_mod *mod, char format)
         my_putchar('0');
         mod->precNum--;
     }
-    if ((!flag) || (mod->okto && mod->precision))
-	{
-		if (mod->okto && nb != 0 && mod->precNum == 0) 
-			my_putchar('0');
-        my_itoa_base(nb, 8, format);
-	}
+	printifneed(flag, mod, nb, format);
 }
 
 void    for_o(char format, va_list arg, t_mod *mod)
 {
-    long long nb;
+    unsigned long long nb;
 
     nb = 0;
 
-	//printf("h -> %d, hh -> %d\n", mod->h, mod->hh);
     if (mod->j)
         nb = (uintmax_t)va_arg(arg, int);
     else if (mod->ll)

@@ -40,12 +40,12 @@ void	work_with_elsec(char nb, t_mod *mod)
 	my_putchar(nb);
 }
 
-void	for_c(char format, va_list arg, t_mod *mod)
+void for_c(va_list arg, t_mod *mod)
 {
 	char nb;
 
 	nb = (char)va_arg(arg, int);
-	if ((mod->width || mod->wildcart) && (mod->min))
+	if ((mod->width || mod->wildcart) && (mod->min || mod->width < 0 || mod->precNum < 0))
 		work_with_wmc(nb, mod);
 	else
 		work_with_elsec(nb, mod);

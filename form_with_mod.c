@@ -25,14 +25,14 @@ int form_with_mod(char format, va_list arg, t_mod *mod)
 	else if (format == 'p')
 		for_p(format, arg, mod);
 	else if (format == 's' || format == 'S')
-		for_s(format, arg, mod);
+		for_s(arg, mod);
 	else if (format == 'c' || format == 'C')
-		for_c(format, arg, mod);
+		for_c(arg, mod);
 	else if (format == 'n')
 		*(va_arg(arg, unsigned int*)) = r_value;
 	else if (format == '%')
-		for_prec(format, arg, mod);
-	else 
-		for_nonvalid(format, arg, mod);
+		for_prec(mod);
+	else
+		for_nonvalid(format, mod);
 	return (0);
 }

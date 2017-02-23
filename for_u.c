@@ -31,7 +31,6 @@ void    work_with_elseu(unsigned long long nb, t_mod *mod)
 {
     unsigned long long tmp;
 	int flag;
-	char c;
 
 	flag = 0;
 	if (mod->precNum == 0 && nb == 0 && mod->precision)
@@ -69,7 +68,7 @@ void	for_u(char format, va_list arg, t_mod *mod)
         nb = (size_t)va_arg(arg, int);
     else if (mod->hh)
         nb = (unsigned char)va_arg(arg, int);
-    else if (mod->h || format == 'U')
+    else if (mod->h)
         nb = (unsigned short int)va_arg(arg, int);
     else
         nb = va_arg(arg, unsigned int);

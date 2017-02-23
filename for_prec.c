@@ -12,11 +12,8 @@
 
 #include "header.h"
 
-void    work_with_wmPr(char nb, t_mod *mod)
+void work_with_wmpr(t_mod *mod)
 {
-    int tmp;
-    int i;
-
     my_putchar('%');
     while ((mod->width - 1) > 0)
     {
@@ -25,11 +22,8 @@ void    work_with_wmPr(char nb, t_mod *mod)
     }
 }
 
-void    work_with_elsePr(char nb, t_mod *mod)
+void work_with_elsepr(t_mod *mod)
 {
-    int tmp;
-    int i;
-
     while ((mod->width - 1) > 0)
     {
         mod->zero ? my_putchar('0') : my_putchar(' ');
@@ -39,10 +33,10 @@ void    work_with_elsePr(char nb, t_mod *mod)
     my_putchar('%');
 }
 
-void    for_prec(char format, va_list arg, t_mod *mod)
+void for_prec(t_mod *mod)
 {
     if ((mod->width || mod->wildcart) && (mod->min))
-        work_with_wmPr(format, mod);
+        work_with_wmpr(mod);
     else
-        work_with_elsePr(format, mod);
+        work_with_elsepr(mod);
 }

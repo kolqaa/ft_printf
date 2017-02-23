@@ -56,7 +56,7 @@ void    work_with_elseS(char *nb, t_mod *mod)
 		my_putstr(nb);
 }
 
-void    for_s(char format, va_list arg, t_mod *mod)
+void for_s(va_list arg, t_mod *mod)
 {
     char *nb;
 	

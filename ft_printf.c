@@ -35,7 +35,8 @@ int	ft_printf(const char *format, ...)
 		}
 		else
 			my_putchar(format[i]);
-		i++;
+		if (format[i] != '\0')
+			i++;
 	}
 	va_end(arg);
 	return (r_value);

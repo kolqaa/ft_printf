@@ -15,14 +15,11 @@
 void    work_with_wmP(long long nb, t_mod *mod, char format)
 {
     long long tmp;
-    int flag;
 
     if (mod->precNum > lennum16(nb))
-		nb == 0 ? (tmp = mod->precNum + 2) : \
-			(tmp = mod->precNum + 2);
+		tmp = mod->precNum + 2;
     else
-		nb == 0 ? (tmp = lennum16(nb) + 2) : \
-			(tmp = lennum16(nb) + 2);
+		tmp = lennum16(nb) + 2;
 	my_putstr("0x");
     while (mod->precNum-- > lennum16(nb))
         my_putchar('0');
@@ -36,11 +33,10 @@ void    work_with_elseP(long long nb, t_mod *mod, char format)
 {
     long long tmp;
     if (mod->precNum > lennum16(nb))
-		nb == 0 ? (tmp = mod->precNum + 2) : \
-			(tmp = mod->precNum + 2);
+		tmp = mod->precNum + 2;
     else
-		nb == 0 ? (tmp = lennum16(nb) + 2) :	\
-			(tmp = lennum16(nb) + 2);
+		tmp = lennum16(nb) + 2;
+
     if (mod->okto && nb != 0 && mod->precision != 1)
         tmp = tmp + 2;
 
