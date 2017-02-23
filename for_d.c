@@ -6,7 +6,7 @@
 /*   By: nsimonov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/06 14:00:01 by nsimonov          #+#    #+#             */
-/*   Updated: 2017/02/22 18:43:42 by nsimonov         ###   ########.fr       */
+/*   Updated: 2017/02/23 15:49:23 by nsimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,6 @@ void	for_d(char format, va_list arg, t_mod *mod)
 	long long  nb;
 
 	nb = 0;
-	//printf("mod->h = %d, mod->hh %d\n", mod->h, mod->hh);
 	if (mod->ll)
 		nb = va_arg(arg, long long);
 	else if (mod->j)
