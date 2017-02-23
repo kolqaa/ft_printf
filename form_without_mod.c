@@ -6,19 +6,19 @@
 /*   By: nsimonov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/02 16:02:17 by nsimonov          #+#    #+#             */
-/*   Updated: 2017/02/22 19:10:47 by nsimonov         ###   ########.fr       */
+/*   Updated: 2017/02/23 17:57:27 by nsimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-void    countin_check(char format, va_list arg)
+void	countin_check(char format, va_list arg)
 {
 	if (format == 'p')
-    {
-	    my_putstr("0x");
-	    my_itoa_base((va_arg(arg, unsigned long int)), 16, format);
-    }
+	{
+		my_putstr("0x");
+		my_itoa_base((va_arg(arg, unsigned long int)), 16, format);
+	}
 	else if (format == 'c' || format == 'C')
 		my_putchar((char)va_arg(arg, int));
 	else if (format == 'n')
@@ -29,15 +29,15 @@ void    countin_check(char format, va_list arg)
 		my_formin(va_arg(arg, unsigned int));
 	else if (format == 'U')
 		my_itoa_base((va_arg(arg, unsigned long)), 10, format);
-    else if (format != '\0')
-	    my_putchar(format);
+	else if (format != '\0')
+		my_putchar(format);
 }
 
-void    form_without_mod(char format, va_list arg)
+void	form_without_mod(char format, va_list arg)
 {
-	char *check;
+	char	*check;
 
-    if (format == 's' || format == 'S')
+	if (format == 's' || format == 'S')
 	{
 		check = va_arg(arg, char*);
 		if (check == NULL)
@@ -45,10 +45,10 @@ void    form_without_mod(char format, va_list arg)
 		else
 			my_putstr(check);
 	}
-	else if  (format == 'd' || format == 'i')
+	else if (format == 'd' || format == 'i')
 		my_signednbr(va_arg(arg, int));
 	else if (format == 'D')
-		printd(va_arg(arg,  long long));
+		printd(va_arg(arg, long long));
 	else if (format == 'o')
 		my_itoa_base((va_arg(arg, unsigned int)), 8, format);
 	else if (format == 'O')

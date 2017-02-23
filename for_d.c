@@ -6,7 +6,7 @@
 /*   By: nsimonov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/06 14:00:01 by nsimonov          #+#    #+#             */
-/*   Updated: 2017/02/23 15:49:23 by nsimonov         ###   ########.fr       */
+/*   Updated: 2017/02/23 18:34:35 by nsimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,17 @@
 void	print_if(int flag, long long nb, long long tmp, t_mod *mod)
 {
 	if (!flag)
-        my_formin(nb);
-    while (mod->width-- > tmp)
-        my_putchar(' ');
+		my_formin(nb);
+	while (mod->width-- > tmp)
+		my_putchar(' ');
 }
 
 void	print_sign(long long nb, t_mod *mod)
 {
 	if (nb < 0)
-        my_putchar('-');
-    else if (nb >= 0  && (mod->plu || mod->space))
-        my_putchar(mod->plu ? '+' : ' ');
+		my_putchar('-');
+	else if (nb >= 0 && (mod->plu || mod->space))
+		my_putchar(mod->plu ? '+' : ' ');
 }
 
 void	work_with_wm(long long nb, t_mod *mod)
@@ -33,9 +33,9 @@ void	work_with_wm(long long nb, t_mod *mod)
 	long long	tmp;
 	int			flag;
 
+	flag = 0;
 	if (mod->width < 0)
 		mod->width *= -1;
-	flag = 0;
 	if (mod->precnum > lennum(nb))
 		tmp = mod->precnum;
 	else
@@ -86,7 +86,7 @@ void	work_with_else(long long nb, t_mod *mod)
 
 void	for_d(char format, va_list arg, t_mod *mod)
 {
-	long long  nb;
+	long long	nb;
 
 	nb = 0;
 	if (mod->ll)

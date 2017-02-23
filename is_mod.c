@@ -6,7 +6,7 @@
 /*   By: nsimonov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/06 12:20:42 by nsimonov          #+#    #+#             */
-/*   Updated: 2017/02/06 12:29:20 by nsimonov         ###   ########.fr       */
+/*   Updated: 2017/02/23 18:36:34 by nsimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	is_mod(char *format)
 {
-	int i;
-	int flag;
+	int	i;
+	int	flag;
 
 	i = 0;
 	flag = 0;
@@ -32,5 +32,4 @@ int	is_mod(char *format)
 	if (flag)
 		return (1);
 	return (0);
-} 
-			
+}

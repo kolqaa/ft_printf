@@ -6,13 +6,13 @@
 /*   By: nsimonov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/18 15:03:50 by nsimonov          #+#    #+#             */
-/*   Updated: 2017/02/18 15:04:33 by nsimonov         ###   ########.fr       */
+/*   Updated: 2017/02/23 18:29:05 by nsimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-int my_strlen(char *str)
+int	my_strlen(char *str)
 {
 	int i;
 

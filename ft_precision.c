@@ -6,7 +6,7 @@
 /*   By: nsimonov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/05 18:59:10 by nsimonov          #+#    #+#             */
-/*   Updated: 2017/02/10 18:05:21 by nsimonov         ###   ########.fr       */
+/*   Updated: 2017/02/23 18:43:04 by nsimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ int	ft_precision(const char *format, int *i, t_mod *mod)
 			(*i)++;
 		(*i)--;
 	}
-	else if (format[*i] == '.' &&  ft_isdigit(format[*i + 1]) == 0)
-			mod->precnum = 0;
+	else if (format[*i] == '.' && ft_isdigit(format[*i + 1]) == 0)
+		mod->precnum = 0;
 	if (mod->precision || mod->precnum)
 		return (1);
 	return (0);

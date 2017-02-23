@@ -6,13 +6,13 @@
 /*   By: nsimonov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/14 18:20:34 by nsimonov          #+#    #+#             */
-/*   Updated: 2017/02/22 19:36:49 by nsimonov         ###   ########.fr       */
+/*   Updated: 2017/02/23 18:47:30 by nsimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-void    work_with_wmu(unsigned long long nb, t_mod *mod)
+void	work_with_wmu(unsigned long long nb, t_mod *mod)
 {
 	unsigned long long tmp;
 
@@ -27,10 +27,10 @@ void    work_with_wmu(unsigned long long nb, t_mod *mod)
 		my_putchar(' ');
 }
 
-void    work_with_elseu(unsigned long long nb, t_mod *mod)
+void	work_with_elseu(unsigned long long nb, t_mod *mod)
 {
-    unsigned long long tmp;
-	int flag;
+	unsigned long long	tmp;
+	int					flag;
 
 	flag = 0;
 	if (mod->precnum == 0 && nb == 0 && mod->precision)
@@ -57,37 +57,21 @@ void	for_u(char format, va_list arg, t_mod *mod)
 {
 	unsigned long long nb;
 
-    nb = 0;
+	nb = 0;
 	if (mod->j)
-        nb = (uintmax_t)va_arg(arg, uintmax_t);
-    else if (mod->ll)
-        nb = va_arg(arg, unsigned long long int);
-    else if (mod->l || format == 'U')
-        nb = va_arg(arg, unsigned long int);
-    else if (mod->z)
-        nb = (size_t)va_arg(arg, int);
-    else if (mod->hh)
-        nb = (unsigned char)va_arg(arg, int);
-    else if (mod->h)
-        nb = (unsigned short int)va_arg(arg, int);
-    else
-        nb = va_arg(arg, unsigned int);
-	/*if (mod->hh)
-        nb = (unsigned char)va_arg(arg, int);
-    else if (mod->l)
-        nb = va_arg(arg, unsigned long long);
-    else if (mod->h || format == 'U')
-        nb = (unsigned long)va_arg(arg, unsigned long);
-	else if (mod->h && format == 'U')
-		nb = (unsigned long)va_arg(arg, unsigned long);
-    else if (mod->ll)
-        nb = va_arg(arg, unsigned long long int);
-    else if (mod->j)
-        nb = (intmax_t)va_arg(arg, intmax_t);
-    else if (mod->z)
-        nb = (size_t)va_arg(arg, int);
-    else
-	nb = va_arg(arg, unsigned int);*/
+		nb = (uintmax_t)va_arg(arg, uintmax_t);
+	else if (mod->ll)
+		nb = va_arg(arg, unsigned long long int);
+	else if (mod->l || format == 'U')
+		nb = va_arg(arg, unsigned long int);
+	else if (mod->z)
+		nb = (size_t)va_arg(arg, int);
+	else if (mod->hh)
+		nb = (unsigned char)va_arg(arg, int);
+	else if (mod->h)
+		nb = (unsigned short int)va_arg(arg, int);
+	else
+		nb = va_arg(arg, unsigned int);
 	if ((mod->width || mod->wildcart) && (mod->min))
 		work_with_wmu(nb, mod);
 	else
