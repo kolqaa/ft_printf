@@ -6,7 +6,7 @@
 /*   By: nsimonov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/30 10:56:25 by nsimonov          #+#    #+#             */
-/*   Updated: 2017/02/20 19:20:25 by nsimonov         ###   ########.fr       */
+/*   Updated: 2017/02/23 17:24:33 by nsimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,17 +20,16 @@ int	ft_printf(const char *format, ...)
 
 	va_start(arg, format);
 	i = 0;
-	r_value = 0;
+	g_value = 0;
 	while (format[i])
 	{
 		if (format[i] == '%')
 		{
 			i++;
-			mod = struct_help(mod);
-			if (fill_struct(&format[i], mod, arg) == 1)
-				with_mod_help(format, &i, arg, mod);
-			else
-				form_without_mod(format[i], arg);
+			mod = mallc_and_fill_struct(mod);
+			fill_struct(&format[i], mod, arg) == 1 ?
+			(with_mod_help(format, &i, arg, mod)) :
+			(form_without_mod(format[i], arg));
 			free(mod);
 		}
 		else
@@ -39,5 +38,5 @@ int	ft_printf(const char *format, ...)
 			i++;
 	}
 	va_end(arg);
-	return (r_value);
+	return (g_value);
 }

@@ -22,7 +22,7 @@ void    countin_check(char format, va_list arg)
 	else if (format == 'c' || format == 'C')
 		my_putchar((char)va_arg(arg, int));
 	else if (format == 'n')
-		*(va_arg(arg, unsigned int*)) = r_value;
+		*(va_arg(arg, unsigned int*)) = g_value;
 	else if (format == '%')
 		my_putchar(format);
 	else if (format == 'u')

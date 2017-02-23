@@ -32,7 +32,7 @@ int	ft_flag(const char *format, int *i, t_mod *mod, va_list arg)
 	if (format[*i] == '*' && format[*i - 1] == '.')
 	{
 		mod->wildcart = 1;
-		mod->precNum = va_arg(arg, int);
+		mod->precnum = va_arg(arg, int);
 	}
 	if (mod->min || mod->plu || mod->okto || mod->zero ||
 		mod->space || mod->wildcart)

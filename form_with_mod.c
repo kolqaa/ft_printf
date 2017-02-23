@@ -6,15 +6,15 @@
 /*   By: nsimonov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/02 16:03:01 by nsimonov          #+#    #+#             */
-/*   Updated: 2017/02/22 15:49:27 by nsimonov         ###   ########.fr       */
+/*   Updated: 2017/02/23 17:09:17 by nsimonov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-int form_with_mod(char format, va_list arg, t_mod *mod)
+int	form_with_mod(char format, va_list arg, t_mod *mod)
 {
-	if (format == 'd' || format == 'i' || format == 'D') 
+	if (format == 'd' || format == 'i' || format == 'D')
 		for_d(format, arg, mod);
 	else if (format == 'u' || format == 'U')
 		for_u(format, arg, mod);
@@ -29,7 +29,7 @@ int form_with_mod(char format, va_list arg, t_mod *mod)
 	else if (format == 'c' || format == 'C')
 		for_c(arg, mod);
 	else if (format == 'n')
-		*(va_arg(arg, unsigned int*)) = r_value;
+		*(va_arg(arg, unsigned int*)) = g_value;
 	else if (format == '%')
 		for_prec(mod);
 	else

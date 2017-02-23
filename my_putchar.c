@@ -15,5 +15,5 @@
 void	my_putchar(char c)
 {
 	write(1, &c, 1);
-	r_value++;
+	g_value++;
 }

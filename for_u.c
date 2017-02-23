@@ -16,11 +16,11 @@ void    work_with_wmu(unsigned long long nb, t_mod *mod)
 {
 	unsigned long long tmp;
 
-	if (mod->precNum > lennum(nb))
-		tmp = mod->precNum;
+	if (mod->precnum > lennum(nb))
+		tmp = mod->precnum;
 	else
 		tmp = lennum(nb);
-	while (mod->precNum-- > lennum(nb))
+	while (mod->precnum-- > lennum(nb))
 		my_putchar('0');
 	my_forun(nb);
 	while ((unsigned long)mod->width-- > tmp)
@@ -33,21 +33,21 @@ void    work_with_elseu(unsigned long long nb, t_mod *mod)
 	int flag;
 
 	flag = 0;
-	if (mod->precNum == 0 && nb == 0 && mod->precision)
+	if (mod->precnum == 0 && nb == 0 && mod->precision)
 	{
 		flag = 1;
 		tmp = 0;
 	}
-	if (mod->precNum > lennum(nb))
-		tmp = mod->precNum;
+	if (mod->precnum > lennum(nb))
+		tmp = mod->precnum;
 	else
 		tmp = lennum(nb);
 	while ((unsigned long)mod->width-- > tmp)
 		mod->zero ? my_putchar('0') : my_putchar(' ');
-	while ((mod->precNum - lennum(nb)) > 0)
+	while ((mod->precnum - lennum(nb)) > 0)
 	{
 		my_putchar('0');
-		mod->precNum--;
+		mod->precnum--;
 	}
 	if (!flag)
 		my_forun(nb);

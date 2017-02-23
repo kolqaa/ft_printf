@@ -36,11 +36,11 @@ void	work_with_wm(long long nb, t_mod *mod)
 	if (mod->width < 0)
 		mod->width *= -1;
 	flag = 0;
-	if (mod->precNum > lennum(nb))
-		tmp = mod->precNum;
+	if (mod->precnum > lennum(nb))
+		tmp = mod->precnum;
 	else
 		tmp = lennum(nb);
-	if (mod->precNum == 0 && nb == 0 && mod->precision)
+	if (mod->precnum == 0 && nb == 0 && mod->precision)
 	{
 		flag = 1;
 		tmp = 0;
@@ -51,21 +51,21 @@ void	work_with_wm(long long nb, t_mod *mod)
 		my_putchar('-');
 	else if (mod->plu || mod->space)
 		mod->plu ? my_putchar('+') : my_putchar(' ');
-	while (mod->precNum-- > lennum(nb))
+	while (mod->precnum-- > lennum(nb))
 		my_putchar('0');
 	print_if(flag, nb, tmp, mod);
 }
 
 void	work_with_else(long long nb, t_mod *mod)
 {
-	if (mod->precNum < 0)
+	if (mod->precnum < 0)
 	{
-		mod->precNum = 0;
+		mod->precnum = 0;
 		mod->precision = 0;
 	}
 	if (mod->precision)
 		mod->zero = 0;
-	while (mod->width - IS_SIGN > MAX(lennum(nb), mod->precNum) && !mod->zero)
+	while (mod->width - IS_SIGN > MAX(lennum(nb), mod->precnum) && !mod->zero)
 	{
 		my_putchar(' ');
 		mod->width--;
@@ -76,10 +76,10 @@ void	work_with_else(long long nb, t_mod *mod)
 		my_putchar('0');
 		mod->width--;
 	}
-	while (lennum(nb) < mod->precNum)
+	while (lennum(nb) < mod->precnum)
 	{
 		my_putchar('0');
-		mod->precNum--;
+		mod->precnum--;
 	}
 	helpd(nb, mod);
 }

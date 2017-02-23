@@ -18,17 +18,17 @@ void    work_with_wmS(char *nb, t_mod *mod)
     int i;
 
     i = 0;
-	if (mod->precNum < 0)
-		mod->precNum *= -1;
+	if (mod->precnum < 0)
+		mod->precnum *= -1;
 	if (mod->width < 0)
         mod->width *= -1;
-    if (mod->precNum < my_strlen(nb) && mod->precision)
-        tmp = mod->precNum;
+    if (mod->precnum < my_strlen(nb) && mod->precision)
+        tmp = mod->precnum;
     else
         tmp = my_strlen(nb);
 	if (!mod->precision)
         my_putstr(nb);
-    while (mod->precNum-- && nb[i])
+    while (mod->precnum-- && nb[i])
         my_putchar(nb[i++]);
 	while (mod->width-- > tmp)
         mod->zero ? my_putchar('0') : my_putchar(' ');
@@ -40,17 +40,17 @@ void    work_with_elseS(char *nb, t_mod *mod)
 	int i;
 	
 	i = 0;
-	if (mod->precNum < 0)
-		mod->precNum *= -1;
+	if (mod->precnum < 0)
+		mod->precnum *= -1;
     if (mod->width < 0)
         mod->width *= -1;
-    if (mod->precNum < my_strlen(nb) && mod->precision)
-        tmp = mod->precNum;
+    if (mod->precnum < my_strlen(nb) && mod->precision)
+        tmp = mod->precnum;
     else
         tmp = my_strlen(nb);
 	while (mod->width-- > tmp)
 		mod->zero ? my_putchar('0') : my_putchar(' ');
-	while (mod->precNum-- && nb[i])
+	while (mod->precnum-- && nb[i])
 		my_putchar(nb[i++]);
 	if (!mod->precision)
 		my_putstr(nb);

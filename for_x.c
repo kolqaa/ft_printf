@@ -15,9 +15,8 @@
 void    work_with_wmX(long long nb, t_mod *mod, char format)
 {
     long long tmp;
-    int flag;
-    if (mod->precNum > lennum16(nb))
-        tmp = mod->precNum;
+    if (mod->precnum > lennum16(nb))
+        tmp = mod->precnum;
     else
         tmp = lennum16(nb);
 	if (mod->okto && nb != 0)
@@ -25,7 +24,7 @@ void    work_with_wmX(long long nb, t_mod *mod, char format)
 		my_putstr((format == 'X' ? "0X" : "0x"));
 		tmp = tmp + 2;
 	}
-    while (mod->precNum-- > lennum16(nb))
+    while (mod->precnum-- > lennum16(nb))
         my_putchar('0');
     my_itoa_base(nb, 16, format);
     while (mod->width-- > tmp)
@@ -38,13 +37,13 @@ void    work_with_elseX(long long nb, t_mod *mod, char format)
     int flag;
 
     flag = 0;
-    if (mod->precNum == 0 && nb == 0 && mod->precision)
+    if (mod->precnum == 0 && nb == 0 && mod->precision)
     {
         flag = 1;
         tmp = 0;
     }
-    else if (mod->precNum > lennum16(nb))
-        tmp = mod->precNum;
+    else if (mod->precnum > lennum16(nb))
+        tmp = mod->precnum;
     else
         tmp = lennum16(nb);
     if (mod->okto && nb != 0 && mod->precision != 1)
@@ -55,17 +54,11 @@ void    work_with_elseX(long long nb, t_mod *mod, char format)
 		mod->zero ? my_putchar('0') : my_putchar(' ');
 	if (mod->okto && !mod->zero && nb != 0)
         my_putstr((format == 'X' ? "0X" : "0x"));
-    while ((mod->precNum - lennum16(nb)) > 0)
+    while ((mod->precnum - lennum16(nb)) > 0)
     {
         my_putchar('0');
-        mod->precNum--;
+        mod->precnum--;
     }
-    //if (mod->precNum == 0 && nb == 0 && mod->precision && mod->okto)
-	//flag = 0;
-	//else if (mod->okto && mod->width == 0 && mod->precision == 0)
-	//flag = 0;
-    //if (mod->okto && !mod->zero && nb != 0)
-	//my_putstr((format == 'X' ? "0X" : "0x"));
     if (!flag)
         my_itoa_base(nb, 16, format);
 }

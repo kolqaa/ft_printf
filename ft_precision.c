@@ -19,14 +19,14 @@ int	ft_precision(const char *format, int *i, t_mod *mod)
 	if (format[*i] == '.' && ft_isdigit(format[*i + 1]))
 	{
 		(*i)++;
-		mod->precNum = ft_atoi(&format[*i]);
+		mod->precnum = ft_atoi(&format[*i]);
 		while (ft_isdigit(format[*i]))
 			(*i)++;
 		(*i)--;
 	}
 	else if (format[*i] == '.' &&  ft_isdigit(format[*i + 1]) == 0)
-			mod->precNum = 0;
-	if (mod->precision || mod->precNum)
+			mod->precnum = 0;
+	if (mod->precision || mod->precnum)
 		return (1);
 	return (0);
 }

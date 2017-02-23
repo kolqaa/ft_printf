@@ -14,7 +14,7 @@
 
 void	helpd(long long nb, t_mod *mod)
 {
-	if (nb != 0 || (nb == 0 && ((mod->precNum != 0 && mod->precision) ||
+	if (nb != 0 || (nb == 0 && ((mod->precnum != 0 && mod->precision) ||
 								!mod->precision)))
         my_formin(nb);
     else if (mod->width)

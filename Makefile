@@ -19,8 +19,9 @@ SRC =  my_bzero.c \
 		for_nonvalid.c \
 		printd.c \
 		helpd.c \
+		mallc_and_fill_struct.c \
 		for_prec.c \
-		struct_help.c \
+		mallc_and_fill_struct.c \
 		with_mod_help.c \
 		my_strlen.c \
 		my_forun.c \
@@ -58,7 +59,7 @@ OBJ = $(SRC:.c=.o)
 all: $(NAME)
 
 $(NAME):
-	gcc -c $(SRC)
+	gcc -c $(SRC) $(CFLAGS)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 

@@ -16,12 +16,12 @@ void    work_with_wmP(long long nb, t_mod *mod, char format)
 {
     long long tmp;
 
-    if (mod->precNum > lennum16(nb))
-		tmp = mod->precNum + 2;
+    if (mod->precnum > lennum16(nb))
+		tmp = mod->precnum + 2;
     else
 		tmp = lennum16(nb) + 2;
 	my_putstr("0x");
-    while (mod->precNum-- > lennum16(nb))
+    while (mod->precnum-- > lennum16(nb))
         my_putchar('0');
     my_itoa_base(nb, 16, format);
     while (mod->width-- > tmp)
@@ -32,8 +32,8 @@ void    work_with_wmP(long long nb, t_mod *mod, char format)
 void    work_with_elseP(long long nb, t_mod *mod, char format)
 {
     long long tmp;
-    if (mod->precNum > lennum16(nb))
-		tmp = mod->precNum + 2;
+    if (mod->precnum > lennum16(nb))
+		tmp = mod->precnum + 2;
     else
 		tmp = lennum16(nb) + 2;
 
@@ -46,14 +46,14 @@ void    work_with_elseP(long long nb, t_mod *mod, char format)
 		mod->width--;
 	}
 	my_putstr("0x");
-    while ((mod->precNum - lennum16(nb)) > 0)
+    while ((mod->precnum - lennum16(nb)) > 0)
     {
         my_putchar('0');
-        mod->precNum--;
+        mod->precnum--;
     }
 	if (nb != 0)
 		my_itoa_base(nb, 16, format);
-	else if (mod->width || mod->precNum > 0)
+	else if (mod->width || mod->precnum > 0)
 		my_putchar('0');
 }
 

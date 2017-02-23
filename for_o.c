@@ -16,7 +16,7 @@ void printifneed(int flag, t_mod *mod, unsigned long long nb, char format)
 {
     if ((!flag) || (mod->okto && mod->precision))
 	{
-		if (mod->okto && nb != 0 && mod->precNum == 0)
+		if (mod->okto && nb != 0 && mod->precnum == 0)
 			my_putchar('0');
         my_itoa_base(nb, 8, format);
 	}
@@ -26,11 +26,11 @@ void    work_with_wmo(unsigned long nb, t_mod *mod, char format)
 {
     unsigned long tmp;
 
-    if (mod->precNum > lennum8(nb))
-        tmp = mod->precNum;
+    if (mod->precnum > lennum8(nb))
+        tmp = mod->precnum;
     else
         tmp = lennum8(nb);
-    while (mod->precNum-- > lennum8(nb))
+    while (mod->precnum-- > lennum8(nb))
         my_putchar('0');
 	if (mod->okto && mod->min)
 	{
@@ -38,7 +38,7 @@ void    work_with_wmo(unsigned long nb, t_mod *mod, char format)
 		tmp = tmp + 1;
 	}
     my_itoa_base(nb, 8, format);
-    while (mod->width-- > tmp)
+    while ((unsigned long)mod->width-- > tmp)
         my_putchar(' ');
 }
 
@@ -48,23 +48,23 @@ void    work_with_elseo(unsigned long nb, t_mod *mod, char format)
     int flag;
 
     flag = 0;
-    if (mod->precNum == 0 && nb == 0 && mod->precision)
+    if (mod->precnum == 0 && nb == 0 && mod->precision)
     {
         flag = 1;
         tmp = 0;
 	}
-    else if  (mod->precNum > lennum8(nb))
-        tmp = mod->precNum;
+    else if  (mod->precnum > lennum8(nb))
+        tmp = mod->precnum;
     else
         tmp = lennum8(nb);
 	if (mod->okto && nb != 0 && mod->precision != 1)
 		tmp++;
-    while (mod->width-- > tmp)
+    while ((unsigned long)mod->width-- > tmp)
         mod->zero ? my_putchar('0') : my_putchar(' ');
-    while ((mod->precNum - lennum8(nb)) > 0)
+    while ((mod->precnum - lennum8(nb)) > 0)
     {
         my_putchar('0');
-        mod->precNum--;
+        mod->precnum--;
     }
 	printifneed(flag, mod, nb, format);
 }
